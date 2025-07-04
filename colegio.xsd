@@ -1,0 +1,133 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Colegio -->
+  <xs:element name="colegio">
+    <xs:complexType>
+      <xs:sequence>
+
+        <!-- Alumnos -->
+        <xs:element name="alumnos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="alumno" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="NombreApellido" />
+                    <xs:element name="apellido" type="NombreApellido" />
+                    <xs:element name="curso" type="NivelEducativo" />
+                    <xs:element name="nota_media" type="Nota" />
+                  </xs:sequence>
+                  <xs:attribute name="num_exp" type="ExpedienteAlumno" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Profesores -->
+        <xs:element name="profesores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="profesor" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="NombreApellido" />
+                    <xs:element name="apellido" type="NombreApellido" />
+                    <xs:element name="departamento" type="Departamento" />
+                    <xs:element name="anyos_experiencia" type="Anyo" />
+                  </xs:sequence>
+                  <xs:attribute name="iniciales" type="Iniciales" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Asignaturas -->
+        <xs:element name="asignaturas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="asignatura" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="NombreApellido" />
+                    <xs:element name="nivel" type="NivelEducativo" />
+                    <xs:element name="departamento" type="NombreApellido" />
+                    <xs:element name="profesor" type="Iniciales" />
+                  </xs:sequence>
+                  <xs:attribute name="cod_asignatura" type="CodigoAsignatura" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipos personalizados -->
+  <xs:simpleType name="ExpedienteAlumno">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z][0-9]{3}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CodigoAsignatura">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}[0-9]{3}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="NombreApellido">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Nota">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Anyo">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="NivelEducativo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1º" />
+      <xs:enumeration value="2º" />
+      <xs:enumeration value="3º" />
+      <xs:enumeration value="4º" />
+      <xs:enumeration value="5º" />
+      <xs:enumeration value="6º" />
+      <xs:enumeration value="1º ESO" />
+      <xs:enumeration value="2º ESO" />
+      <xs:enumeration value="3º ESO" />
+      <xs:enumeration value="4º ESO" />
+      <xs:enumeration value="1º BACH" />
+      <xs:enumeration value="2º BACH" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="Departamento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ciencia y Tecnología" />
+      <xs:enumeration value="Ciencias Sociales" />
+      <xs:enumeration value="Humanidades" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Iniciales">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

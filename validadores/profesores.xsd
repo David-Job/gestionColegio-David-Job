@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="tipos.xsd" />
+    <xs:complexType name="Profesores">
+        <xs:sequence>
+            <xs:element name="profesor" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="NombreApellido" />
+                        <xs:element name="apellido" type="NombreApellido" />
+                        <xs:element name="departamento" type="Departamento" />
+                        <xs:element name="anyos_experiencia" type="Anyo" />
+                    </xs:sequence>
+                    <xs:attribute name="iniciales" type="Iniciales" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+

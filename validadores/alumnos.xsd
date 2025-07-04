@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="tipos.xsd" />
+    <xs:complexType name="Alumnos">
+        <xs:sequence>
+            <xs:element name="alumno" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="NombreApellido" />
+                        <xs:element name="apellido" type="NombreApellido" />
+                        <xs:element name="curso" type="NivelEducativo" />
+                        <xs:element name="nota_media" type="Nota" />
+                    </xs:sequence>
+                    <xs:attribute name="num_exp" type="ExpedienteAlumno"
+                        use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

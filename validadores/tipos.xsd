@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definición de tipos -->
+    <xs:simpleType name="ExpedienteAlumno">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9]{3}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CodigoAsignatura">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{3}[0-9]{3}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NombreApellido">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Nota">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Anyo">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NivelEducativo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1º" />
+            <xs:enumeration value="2º" />
+            <xs:enumeration value="3º" />
+            <xs:enumeration value="4º" />
+            <xs:enumeration value="5º" />
+            <xs:enumeration value="6º" />
+            <xs:enumeration value="1º ESO" />
+            <xs:enumeration value="2º ESO" />
+            <xs:enumeration value="3º ESO" />
+            <xs:enumeration value="4º ESO" />
+            <xs:enumeration value="1º BACH" />
+            <xs:enumeration value="2º BACH" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="Departamento">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ciencia y Tecnología" />
+            <xs:enumeration value="Ciencias Sociales" />
+            <xs:enumeration value="Humanidades" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Iniciales">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{3}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

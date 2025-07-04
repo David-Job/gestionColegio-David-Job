@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="alumnos.xsd" />
+    <xs:include schemaLocation="profesores.xsd" />
+    <xs:include schemaLocation="asignaturas.xsd" />
+    <!-- Colegio -->
+    <xs:element name="colegio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alumnos" type="Alumnos" />
+                <xs:element name="profesores" type="Profesores" />
+                <xs:element name="asignaturas" type="Asignaturas" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+

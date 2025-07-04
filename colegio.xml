@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="alumnos.xsl"?>
+<colegio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="colegio.xsd">
+
+  <alumnos>
+
+    <alumno num_exp="A001">
+      <nombre>Pablo</nombre>
+      <apellido>Millas Morales</apellido>
+      <curso>2º ESO</curso>
+      <nota_media>7</nota_media>
+    </alumno>
+
+    <alumno num_exp="A002">
+      <nombre>Jose</nombre>
+      <apellido>Cruz Caballero</apellido>
+      <curso>2º ESO</curso>
+      <nota_media>10</nota_media>
+    </alumno>
+
+    <alumno num_exp="B003">
+      <nombre>Pepe</nombre>
+      <apellido>Cruz</apellido>
+      <curso>2º ESO</curso>
+      <nota_media>10</nota_media>
+    </alumno>
+
+    <alumno num_exp="C004">
+      <nombre>David</nombre>
+      <apellido>Jiménez Suárez</apellido>
+      <curso>2º BACH</curso>
+      <nota_media>5</nota_media>
+    </alumno>
+
+  </alumnos>
+
+
+  <profesores>
+
+    <profesor iniciales="JJJ">
+      <nombre>Jose</nombre>
+      <apellido>Jose Jose</apellido>
+      <departamento>Ciencia y Tecnología</departamento>
+      <anyos_experiencia>8</anyos_experiencia>
+    </profesor>
+
+    <profesor iniciales="ABC">
+      <nombre>Alberto</nombre>
+      <apellido>Bolaños Carrero</apellido>
+      <departamento>Ciencia y Tecnología</departamento>
+      <anyos_experiencia>20</anyos_experiencia>
+    </profesor>
+
+    <profesor iniciales="CLC">
+      <nombre>Constantino</nombre>
+      <apellido>Lantigua Calderín</apellido>
+      <departamento>Ciencia y Tecnología</departamento>
+      <anyos_experiencia>1000000000</anyos_experiencia>
+    </profesor>
+
+  </profesores>
+
+
+  <asignaturas>
+
+    <asignatura cod_asignatura="MAT001">
+      <nombre>Matemáticas</nombre>
+      <nivel>1º</nivel>
+      <departamento>Ciencia y Tecnología</departamento>
+      <profesor>JJJ</profesor>
+    </asignatura>
+
+    <asignatura cod_asignatura="MAT100">
+      <nombre>Matemáticas I</nombre>
+      <nivel>1º BACH</nivel>
+      <departamento>Ciencia y Tecnología</departamento>
+      <profesor>JJJ</profesor>
+    </asignatura>
+
+    <asignatura cod_asignatura="LIT002">
+      <nombre>Lengua y Literatura</nombre>
+      <nivel>2º BACH</nivel>
+      <departamento>Humanidades</departamento>
+      <profesor>ABC</profesor>
+    </asignatura>
+
+    <asignatura cod_asignatura="INF001">
+      <nombre>Informática</nombre>
+      <nivel>4º ESO</nivel>
+      <departamento>Ciencia y Tecnología</departamento>
+      <profesor>CLC</profesor>
+    </asignatura>
+
+  </asignaturas>
+
+</colegio>

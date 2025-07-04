@@ -22,7 +22,7 @@
 
     <xs:simpleType name="NombreApellido">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" />
+            <xs:pattern value="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+( ([A-ZÁÉÍÓÚÑ][a-záéíóúñ]+))*" />
         </xs:restriction>
     </xs:simpleType>
 

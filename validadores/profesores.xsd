@@ -8,11 +8,14 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="nombre" type="NombreApellido" />
-                        <xs:element name="apellido" type="NombreApellido" />
-                        <xs:element name="departamento" type="Departamento" />
-                        <xs:element name="anyos_experiencia" type="Anyo" />
+                        <xs:element name="experiencia" type="xs:positiveInteger" />
+                        <xs:element name="email" type="Email" />
+                        <xs:element name="genero" type="Genero" />
+                        <xs:element name="departamento" type="xs:string" />
+                        <xs:element name="asignatura" type="RefAsignatura" />
+                        <xs:element name="activo" type="siONo" />
                     </xs:sequence>
-                    <xs:attribute name="iniciales" type="Iniciales" use="required" />
+                    <xs:attribute name="id" type="idProfesor" use="required" />
                 </xs:complexType>
             </xs:element>
         </xs:sequence>

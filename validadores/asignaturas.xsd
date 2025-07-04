@@ -8,12 +8,12 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="nombre" type="NombreApellido" />
-                        <xs:element name="nivel" type="NivelEducativo" />
-                        <xs:element name="departamento" type="NombreApellido" />
-                        <xs:element name="profesor" type="Iniciales" />
+                        <xs:element name="tipo" type="TipoAsignatura" />
+                        <xs:element name="descripcion" type="xs:string" />
+                        <xs:element name="horasSemanales" type="xs:positiveInteger" />
+                        <xs:element name="curso" type="Curso" />
                     </xs:sequence>
-                    <xs:attribute name="cod_asignatura" type="CodigoAsignatura"
-                        use="required" />
+                    <xs:attribute name="codigo" type="CodigoAsignatura" use="required" />
                 </xs:complexType>
             </xs:element>
         </xs:sequence>

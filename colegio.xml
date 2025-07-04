@@ -1,97 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="alumnos.xsl"?>
+<!--
 <colegio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="colegio.xsd">
+    xsi:noNamespaceSchemaLocation="colegio.xsd">
+-->
+<colegio>
 
-  <alumnos>
+    <alumnos>
+        <alumno id="A001">
+            <nombre>Antonio Martín</nombre>
+            <edad>19</edad>
+            <email>antonio.martin@example.com</email>
+            <genero>M</genero>
+            <nivel>ESO</nivel>
+            <asignatura codigo="INF109" />
+            <activo>Sí</activo>
+        </alumno>
 
-    <alumno num_exp="A001">
-      <nombre>Pablo</nombre>
-      <apellido>Millas Morales</apellido>
-      <curso>2º ESO</curso>
-      <nota_media>7</nota_media>
-    </alumno>
+        <alumno id="A002">
+            <nombre>Clara Martín</nombre>
+            <edad>15</edad>
+            <email>clara.martin@example.com</email>
+            <genero>Otro</genero>
+            <nivel>ESO</nivel>
+            <asignatura codigo="MAT101" />
+            <activo>No</activo>
+        </alumno>
 
-    <alumno num_exp="A002">
-      <nombre>Jose</nombre>
-      <apellido>Cruz Caballero</apellido>
-      <curso>2º ESO</curso>
-      <nota_media>10</nota_media>
-    </alumno>
+        <alumno id="A003">
+            <nombre>Marta López</nombre>
+            <edad>20</edad>
+            <email>marta.lopez@example.com</email>
+            <genero>M</genero>
+            <nivel>Bachillerato</nivel>
+            <asignatura codigo="FIS102" />
+            <activo>No</activo>
+        </alumno>
 
-    <alumno num_exp="B003">
-      <nombre>Pepe</nombre>
-      <apellido>Cruz</apellido>
-      <curso>2º ESO</curso>
-      <nota_media>10</nota_media>
-    </alumno>
+        <alumno id="A004">
+            <nombre>Paula Rodríguez</nombre>
+            <edad>17</edad>
+            <email>paula.rodriguez@example.com</email>
+            <genero>Otro</genero>
+            <nivel>FP</nivel>
+            <asignatura codigo="MAT101" />
+            <activo>Sí</activo>
+        </alumno>
 
-    <alumno num_exp="C004">
-      <nombre>David</nombre>
-      <apellido>Jiménez Suárez</apellido>
-      <curso>2º BACH</curso>
-      <nota_media>5</nota_media>
-    </alumno>
+        <alumno id="A005">
+            <nombre>Sofía Gómez</nombre>
+            <edad>15</edad>
+            <email>sofia.gomez@example.com</email>
+            <genero>M</genero>
+            <nivel>FP</nivel>
+            <asignatura codigo="BIO104" />
+            <activo>Sí</activo>
+        </alumno>
+    </alumnos>
 
-  </alumnos>
+    <profesores>
+        <profesor id="P001">
+            <nombre>Francisco Rodríguez</nombre>
+            <experiencia>13</experiencia>
+            <email>francisco.rodriguez@example.com</email>
+            <genero>Otro</genero>
+            <departamento>Ciencias</departamento>
+            <asignatura codigo="MAT101" />
+            <activo>Sí</activo>
+        </profesor>
 
+        <profesor id="P002">
+            <nombre>Francisco Martín</nombre>
+            <experiencia>17</experiencia>
+            <email>francisco.martin@example.com</email>
+            <genero>M</genero>
+            <departamento>Letras</departamento>
+            <asignatura codigo="FIS102" />
+            <activo>Sí</activo>
+        </profesor>
 
-  <profesores>
+        <profesor id="P003">
+            <nombre>María Rodríguez</nombre>
+            <experiencia>20</experiencia>
+            <email>maria.rodriguez@example.com</email>
+            <genero>F</genero>
+            <departamento>Tecnología</departamento>
+            <asignatura codigo="HIS103" />
+            <activo>No</activo>
+        </profesor>
 
-    <profesor iniciales="JJJ">
-      <nombre>Jose</nombre>
-      <apellido>Jose Jose</apellido>
-      <departamento>Ciencia y Tecnología</departamento>
-      <anyos_experiencia>8</anyos_experiencia>
-    </profesor>
+        <profesor id="P004">
+            <nombre>Francisco Martín</nombre>
+            <experiencia>10</experiencia>
+            <email>francisco.martin1@example.com</email>
+            <genero>M</genero>
+            <departamento>Idiomas</departamento>
+            <asignatura codigo="BIO104" />
+            <activo>No</activo>
+        </profesor>
 
-    <profesor iniciales="ABC">
-      <nombre>Alberto</nombre>
-      <apellido>Bolaños Carrero</apellido>
-      <departamento>Ciencia y Tecnología</departamento>
-      <anyos_experiencia>20</anyos_experiencia>
-    </profesor>
+        <profesor id="P005">
+            <nombre>Isabel Rodríguez</nombre>
+            <experiencia>23</experiencia>
+            <email>isabel.rodriguez@example.com</email>
+            <genero>Otro</genero>
+            <departamento>Arte</departamento>
+            <asignatura codigo="QUI105" />
+            <activo>No</activo>
+        </profesor>
+    </profesores>
 
-    <profesor iniciales="CLC">
-      <nombre>Constantino</nombre>
-      <apellido>Lantigua Calderín</apellido>
-      <departamento>Ciencia y Tecnología</departamento>
-      <anyos_experiencia>1000000000</anyos_experiencia>
-    </profesor>
+    <asignaturas>
+        <asignatura codigo="BIO104">
+            <nombre>Biología</nombre>
+            <tipo>obligatoria</tipo>
+            <descripcion>Genética y biología celular</descripcion>
+            <horasSemanales>4</horasSemanales>
+            <curso>2º</curso>
+        </asignatura>
 
-  </profesores>
+        <asignatura codigo="EDF108">
+            <nombre>Educación Física</nombre>
+            <tipo>optativa</tipo>
+            <descripcion>Actividad física y salud</descripcion>
+            <horasSemanales>2</horasSemanales>
+            <curso>1º</curso>
+        </asignatura>
 
+        <asignatura codigo="FIL106">
+            <nombre>Filosofía</nombre>
+            <tipo>optativa</tipo>
+            <descripcion>Ética y lógica</descripcion>
+            <horasSemanales>2</horasSemanales>
+            <curso>2º</curso>
+        </asignatura>
 
-  <asignaturas>
+        <asignatura codigo="FIS102">
+            <nombre>Física</nombre>
+            <tipo>obligatoria</tipo>
+            <descripcion>Mecánica y termodinámica</descripcion>
+            <horasSemanales>4</horasSemanales>
+            <curso>1º</curso>
+        </asignatura>
 
-    <asignatura cod_asignatura="MAT001">
-      <nombre>Matemáticas</nombre>
-      <nivel>1º</nivel>
-      <departamento>Ciencia y Tecnología</departamento>
-      <profesor>JJJ</profesor>
-    </asignatura>
+        <asignatura codigo="HIS103">
+            <nombre>Historia</nombre>
+            <tipo>optativa</tipo>
+            <descripcion>Historia contemporánea</descripcion>
+            <horasSemanales>3</horasSemanales>
+            <curso>2º</curso>
+        </asignatura>
 
-    <asignatura cod_asignatura="MAT100">
-      <nombre>Matemáticas I</nombre>
-      <nivel>1º BACH</nivel>
-      <departamento>Ciencia y Tecnología</departamento>
-      <profesor>JJJ</profesor>
-    </asignatura>
-
-    <asignatura cod_asignatura="LIT002">
-      <nombre>Lengua y Literatura</nombre>
-      <nivel>2º BACH</nivel>
-      <departamento>Humanidades</departamento>
-      <profesor>ABC</profesor>
-    </asignatura>
-
-    <asignatura cod_asignatura="INF001">
-      <nombre>Informática</nombre>
-      <nivel>4º ESO</nivel>
-      <departamento>Ciencia y Tecnología</departamento>
-      <profesor>CLC</profesor>
-    </asignatura>
-
-  </asignaturas>
+        <asignatura codigo="INF109">
+            <nombre>Informática</nombre>
+            <tipo>obligatoria</tipo>
+            <descripcion>Genética y biología celular</descripcion>
+            <horasSemanales>4</horasSemanales>
+            <curso>2º</curso>
+        </asignatura>
+    </asignaturas>
 
 </colegio>

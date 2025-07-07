@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="alumnos.xsl"?>
+<?xml-stylesheet type="text/xsl" href="vistas/colegio.xsl"?>
 <colegio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="validadores/colegio.xsd">
 
@@ -20,7 +20,7 @@
             <email>clara.martin@example.com</email>
             <genero>Otro</genero>
             <nivel>ESO</nivel>
-            <asignatura codigo="MAT101" />
+            <asignatura codigo="FIL106" />
             <activo>No</activo>
         </alumno>
 
@@ -40,7 +40,7 @@
             <email>paula.rodriguez@example.com</email>
             <genero>Otro</genero>
             <nivel>FP</nivel>
-            <asignatura codigo="MAT101" />
+            <asignatura codigo="HIS103" />
             <activo>Sí</activo>
         </alumno>
 
@@ -62,7 +62,7 @@
             <email>francisco.rodriguez@example.com</email>
             <genero>Otro</genero>
             <departamento>Ciencias</departamento>
-            <asignatura codigo="MAT101" />
+            <asignatura codigo="FIS102" />
             <activo>Sí</activo>
         </profesor>
 
@@ -72,7 +72,7 @@
             <email>francisco.martin@example.com</email>
             <genero>M</genero>
             <departamento>Letras</departamento>
-            <asignatura codigo="FIS102" />
+            <asignatura codigo="HIS103" />
             <activo>Sí</activo>
         </profesor>
 
@@ -82,7 +82,7 @@
             <email>maria.rodriguez@example.com</email>
             <genero>F</genero>
             <departamento>Tecnología</departamento>
-            <asignatura codigo="HIS103" />
+            <asignatura codigo="INF109" />
             <activo>No</activo>
         </profesor>
 
@@ -102,7 +102,7 @@
             <email>isabel.rodriguez@example.com</email>
             <genero>Otro</genero>
             <departamento>Arte</departamento>
-            <asignatura codigo="QUI105" />
+            <asignatura codigo="EDF108" />
             <activo>No</activo>
         </profesor>
     </profesores>
